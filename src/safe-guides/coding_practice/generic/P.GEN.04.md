@@ -15,6 +15,8 @@
 1. 方便 Rust 类型推断。有这些限制才能明确能推断这些泛型参数的行为，避免产生错误。参考 [RFC 0447 ](https://github.com/rust-lang/rfcs/blob/master/text/0447-no-unused-impl-parameters.md) 。
 2. 避免语义定义不明确的情况。如果 `impl` 上存在自由的 泛型参数，则无法保证这一点。
 
+注：Rust 编译器可以检测这种情况，但是编译错误比较晦涩，本原则用来提示开发者注意这种情况。
+
 **【反例】**
 
 ```rust
